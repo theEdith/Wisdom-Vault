@@ -20,7 +20,7 @@ const NewQuote = () => {
     };
     setLoading(true);
 
-    axios.post('http://localhost:8080/quotes', data)
+    axios.post('https://wisdom-vault-server.vercel.app/quotes', data)
     .then(() => {
       setLoading(false);
       enqueueSnackbar("Quote Added Successfully", {variant: 'success'})

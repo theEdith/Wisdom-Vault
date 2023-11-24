@@ -13,7 +13,7 @@ const DeleteQuote = () => {
 
   const handleDeleteQuote = () => {
     setLoading(true);
-    axios.delete(`http://localhost:8080/quotes/${id}`)
+    axios.delete(`https://wisdom-vault-server.vercel.app/quotes/${id}`)
       .then(() => {
         setLoading(false);
         enqueueSnackbar("Quote Deleted Successfully", {variant: 'success'})

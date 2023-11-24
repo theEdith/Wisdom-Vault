@@ -30,7 +30,7 @@ const ShowQuote = () => {
 
 const handleNextClick = async () => {
     try {
-      const response = await axios.get('http://localhost:8080/quotes');
+      const response = await axios.get('https://wisdom-vault-server.vercel.app/quotes');
       const quotes = response.data.data;
     //   console.log(quotes)
 

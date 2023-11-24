@@ -13,7 +13,7 @@ const Home = () => {
   useEffect(() => {
     setLoading(true);
     axios
-      .get('http://localhost:8080/quotes')
+      .get('https://wisdom-vault-server.vercel.app/quotes')
       .then((response) => {
         setQuotes(response.data.data);
         // console.log(response.data.data);

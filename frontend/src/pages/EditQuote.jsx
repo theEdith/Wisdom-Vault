@@ -16,7 +16,7 @@ const EditQuote = () => {
   useEffect(() => {
     setLoading(true);
     axios
-      .get(`http://localhost:8080/quotes/${id}`)
+      .get(`https://wisdom-vault-server.vercel.app/quotes/${id}`)
       .then((response) => {
         // console.log(response)
         setAuthor(response.data.author);
@@ -38,7 +38,7 @@ const EditQuote = () => {
     setLoading(true);
 
     axios
-      .patch(`http://localhost:8080/quotes/${id}`, data)
+      .patch(`https://wisdom-vault-server.vercel.app/quotes/${id}`, data)
       .then(() => {
         setLoading(false);
         enqueueSnackbar("Quote Edited Successfully", { variant: "success" });
